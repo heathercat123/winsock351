@@ -56,7 +56,7 @@ EXPORTS
 	WSACleanup=WINSOCK351_WSACleanup @116
 	WSAWaitForMultipleEvents=WINSOCK351_WSAWaitForMultipleEvents @124
 	WSAAddressToStringA=WINSOCK351_WSAAddressToStringA @125
-	WSASocketA=WINSOCK351_WSAAddressToStringA @126
+	WSASocketA=WINSOCK351_WSASocketA @126
 
 	__WSAFDIsSet=wsock32.__WSAFDIsSet @151
 	freeaddrinfo=WINSOCK351_freeaddrinfo @175
