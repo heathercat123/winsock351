@@ -1,3 +1,4 @@
+#define _WIN32_WINNT 0x0100
 #include <winsock.h>
 #include "events.h"
 
@@ -95,6 +96,7 @@ DWORD WSAAPI WINSOCK351_WSAWaitForMultipleEvents(
 	BOOL fAlertable);
 void WSAAPI WINSOCK351_freeaddrinfo();
 int WSAAPI WINSOCK351_getaddrinfo();
+SOCKET WSAAPI WINSOCK351_WSASocketA();
 
 #ifdef __cplusplus
 }

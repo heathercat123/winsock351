@@ -1,5 +1,5 @@
 LIBRARY ws2_32
-DESCRIPTION "Winsock2 compatibility layer for Windows NT 3.51"
+DESCRIPTION "Winsock2 compatibility layer for Windows NT 3.51 and Windows 95"
 EXPORTS
 	accept=wsock32.accept @1
 	bind=wsock32.bind @2
@@ -55,6 +55,8 @@ EXPORTS
 	WSAStartup=WINSOCK351_WSAStartup @115
 	WSACleanup=WINSOCK351_WSACleanup @116
 	WSAWaitForMultipleEvents=WINSOCK351_WSAWaitForMultipleEvents @124
+	WSAAddressToStringA=WINSOCK351_WSAAddressToStringA @125
+	WSASocketA=WINSOCK351_WSAAddressToStringA @126
 
 	__WSAFDIsSet=wsock32.__WSAFDIsSet @151
 	freeaddrinfo=WINSOCK351_freeaddrinfo @175

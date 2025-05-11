@@ -106,7 +106,7 @@ int WSAAPI WINSOCK351_WSAIoctl(
 }
 
 int WSAAPI WINSOCK351_WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData) {
-	DebugLog("WSAStartup: wVersionRequested: 0x%X", wVersionRequested);
+	//DebugLog("WSAStartup: wVersionRequested: 0x%X", wVersionRequested);
 	const int err = WSAStartup(wVersionRequested, lpWSAData);
 	if (err != 0)
 		return err;
@@ -122,7 +122,7 @@ int WSAAPI WINSOCK351_WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData) {
 }
 
 int WSAAPI WINSOCK351_WSACleanup() {
-	DebugLog("WSACleanup");
+	// DebugLog("WSACleanup");
 	const int err = WSACleanup();
 	if (err != 0)
 		return err;
@@ -166,5 +166,17 @@ void WSAAPI WINSOCK351_freeaddrinfo() {
 // STUB
 int WSAAPI WINSOCK351_getaddrinfo() {
 	DebugLog("getaddrinfo");
+	return SOCKET_ERROR;
+}
+
+// STUB
+int WSAAPI WINSOCK351_WSAAddressToStringA() {
+	DebugLog("WSAAddressToStringA");
+	return SOCKET_ERROR;
+}
+
+// STUB
+SOCKET WSAAPI WINSOCK351_WSASocketA() {
+	DebugLog("WSASocketA");
 	return SOCKET_ERROR;
 }
